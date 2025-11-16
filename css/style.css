@@ -288,3 +288,114 @@ td {
   color: #aaa;
   font-size: 13px;
 }
+/* ============================
+   RESPONSIVE DESIGN — MOBILE & TABLET
+============================ */
+
+/* Tablet landscape & layar menengah */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .app {
+    margin-left: 200px;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 820px) {
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 15px 20px;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .app {
+    margin-left: 0;
+    padding-top: 110px;
+  }
+
+  .cards {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-aesthetic {
+    width: 100%;
+  }
+}
+
+/* HP ukuran sedang */
+@media (max-width: 600px) {
+  /* Login */
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .login-left img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .login-right {
+    padding: 25px;
+  }
+
+  /* Dashboard Title */
+  .dash-title {
+    font-size: 24px;
+  }
+
+  /* Cards */
+  .cards {
+    gap: 15px;
+  }
+
+  .card-aesthetic {
+    padding: 18px;
+  }
+
+  /* Tabel */
+  table th,
+  table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 420px) {
+  .sidebar nav a {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  
+  .btn-primary,
+  .btn-dashboard {
+    width: 100%;
+  }
+
+  .table-wrap {
+    padding: 15px;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+}
