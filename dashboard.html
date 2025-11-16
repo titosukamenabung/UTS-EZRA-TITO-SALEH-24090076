@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Kantin Bu Vida</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dark-mode">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">Kantin Bu Vida</div>
+      <nav>
+        <a class="active">Dashboard</a>
+        <a href="products.html">Data Produk</a>
+        <a id="logout">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header>
+        <h1 class="dash-title">Dashboard</h1>
+      </header>
+
+      <div class="cards aesthetic-cards">
+        <div class="card card-aesthetic">
+          <h3>Total Produk</h3>
+          <p id="totalProducts">0</p>
+        </div>
+
+        <div class="card card-aesthetic">
+          <h3>Total Penjualan</h3>
+          <p id="totalSales">0</p>
+        </div>
+
+        <div class="card card-aesthetic">
+          <h3>Total Revenue</h3>
+          <p id="totalRevenue">Rp 0</p>
+        </div>
+      </div>
+
+      <div class="center">
+        <button id="toProducts" class="btn-primary btn-dashboard">Lihat Data Produk →</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

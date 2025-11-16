@@ -1,0 +1,290 @@
+/* ============================
+   RESET + FONT
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body.dark-mode {
+  background: #0d0a14; 
+  color: #eee;
+}
+
+/* ============================
+   AESTHETIC PURPLE THEME
+============================ */
+:root {
+  --primary: #a56bff;
+  --primary-dark: #8e4eff;
+  --bg-dark: #0d0a14;
+  --sidebar: #151021;
+  --card: #1b152b;
+  --text: #eee;
+  --text-soft: #bbb;
+  --shadow-soft: 0 0 25px rgba(165, 107, 255, 0.25);
+}
+
+/* ============================
+   SIDEBAR
+============================ */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: var(--sidebar);
+  padding: 25px;
+  position: fixed;
+  top: 0; left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 0 20px rgba(165,107,255,0.18);
+}
+
+.sidebar .brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: 0 0 6px rgba(165,107,255,0.5);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--text-soft);
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: 0.25s ease;
+}
+
+.sidebar nav a:hover {
+  background: rgba(165,107,255,0.15);
+  color: var(--primary);
+}
+
+.sidebar nav a.active {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ============================
+   CONTENT AREA
+============================ */
+.app {
+  margin-left: 240px;
+  padding: 30px;
+}
+
+.dash-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* ============================
+   CARDS (Aesthetic Purple)
+============================ */
+.cards {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.card-aesthetic {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 18px;
+  width: 240px;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(165,107,255,0.18);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card-aesthetic:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(165,107,255,0.28);
+}
+
+/* ============================
+   BUTTON UTAMA
+============================ */
+.btn-primary,
+.btn-dashboard {
+  background: var(--primary);
+  color: white;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 0 15px rgba(165,107,255,0.3);
+}
+
+.btn-primary:hover,
+.btn-dashboard:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(165,107,255,0.5);
+}
+
+/* ============================
+   TABLE (Produk)
+============================ */
+.table-wrap {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-soft);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: rgba(255,255,255,0.06);
+}
+
+thead th {
+  padding: 12px;
+  color: var(--primary);
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: 0.25s;
+}
+
+tbody tr:hover {
+  background: rgba(165,107,255,0.08);
+}
+
+td {
+  padding: 12px;
+}
+
+/* Tombol Aksi */
+.edit-btn, .delete-btn {
+  padding: 7px 12px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: #6c4eff;
+}
+
+.edit-btn:hover {
+  background: #5232ff;
+}
+
+.delete-btn {
+  background: #ff4976;
+}
+
+.delete-btn:hover {
+  background: #d83860;
+}
+
+/* ============================
+   LOGIN PAGE
+============================ */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--bg-dark);
+}
+
+.login-container {
+  width: 850px;
+  height: 500px;
+  background: var(--card);
+  display: flex;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.login-left img {
+  height: 100%;
+  width: 400px;
+  object-fit: cover;
+}
+
+.login-right {
+  flex: 1;
+  padding: 45px;
+}
+
+.login-right h2 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.input-wrap {
+  margin-bottom: 18px;
+}
+
+.input-wrap label {
+  display: block;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #160e23;
+  color: #fff;
+  transition: 0.25s;
+}
+
+.input-wrap input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(165,107,255,0.3);
+}
+
+.btn-login-hover {
+  width: 100%;
+  background: var(--primary);
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.25s;
+}
+
+.btn-login-hover:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 0 25px rgba(165,107,255,0.5);
+}
+
+/* Note kecil */
+.note {
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 13px;
+}
