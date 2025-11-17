@@ -3,8 +3,8 @@
 // --- Data summary ---
 const summary = {
   totalProducts: 3,
-  totalSales: 40,
-  totalRevenue: 480000
+  totalSales: 59,
+  totalRevenue: 649000
 };
 
 // --- Data Produk Baru ---
@@ -20,23 +20,39 @@ function formatRupiah(n){
 }
 
 // ---- Login page ----
+// ===========================
+//       LOGIN (NIM)
+// ===========================
 const loginForm = document.getElementById('loginForm');
 if(loginForm){
+
+  // Hanya NIM ini yang boleh login
+  const allowedNIM = ["24090076"];
+
   loginForm.addEventListener('submit', function(e){
     e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
 
-    if(!email || !password){
-      alert('Email dan password tidak boleh kosong');
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim(); // ini NIM
+
+    if(!password){
+      alert('Masukkan password (NIM)');
       return;
     }
 
-    localStorage.setItem('uts_user', email);
-    alert('Login berhasil');
+    if(password !== allowedNIM[0]){
+      alert('Password (NIM) salah!');
+      return;
+    }
+
+    localStorage.setItem('uts_user', email || "User");
+    localStorage.setItem('uts_nim', password);
+
+    alert('Login berhasil!');
     window.location.href = 'dashboard.html';
   });
 }
+
 
 // ---- Dashboard ----
 const totalProductsEl = document.getElementById('totalProducts');
